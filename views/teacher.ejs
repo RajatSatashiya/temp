@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <title>Teacher Portal</title>
+</head>
+    
+    <body>
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#"></a>
+          </div>
+          <ul class="nav navbar-nav">
+            
+            <li><a href="/institute">Institute Portal</a></li>
+          </ul>
+        </div>
+      </nav>
+    
+        <div class="container">
+            <h3>Teacher View And Manage</h3>
+        </div>
+    
+        <div class="container" >
+            <div class="row">
+        
+              <ul class="container">
+                <a class="btn btn-primary text-center" href="/institute/teacher/new" role="button"> Add teacher</a>
+                <br>
+                <br>
+                <a class="btn btn-primary text-center" href="/institute/teacher/edit" role="button"> Edit teacher</a>
+                <br>
+                <br>
+                <a class="btn btn-primary text-center" href="/institute/teacher/delete" role="button"> Delete teacher</a>
+    
+        
+              </ul>
+            </div>
+          </div>
+    
+          <br>
+          <br>
+          <br>
+          <br>
+      <div class="container">
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">id</th>
+                <th scope="col">Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Address</th>
+                <th scope="col">Date Of Birth</th>
+                <th scope="col">Phone</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% data.forEach(teacher => { %>  
+              <tr>
+                <th scope="row">T-<%= teacher.id %></th>
+                <td><%= teacher.tname %></td>
+                <td><%= teacher.email %></td>
+                <td><%= teacher.address %></td>
+                <td><%= teacher.dob %></td>
+                <td><%= teacher.phone %></td>
+              </tr>
+              <% }); %>
+            
+            </tbody>
+          </table>
+      </div>
+    </body>
+    
+    </html>
+      </div>
+    </body>
+    
+</html>

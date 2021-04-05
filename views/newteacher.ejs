@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <title>Teacehr Portal</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#"></a>
+      </div>
+      <ul class="nav navbar-nav">
+        
+        <li><a href="/institute">Institute Portal</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container">
+
+
+    <h2>Add Teacher</h2>
+
+    <form method="POST" action="/institute/teacher">
+      <p>Teacher ID will be auto assigned on successful registration</p>
+      <label for="name">Name:</label><br>
+      <input type="text" name="name" required><br>
+      <label for="email">Email:</label><br>
+      <input type="email" name="email" required><br>
+      <label for="address">Address:</label><br>
+      <input type="text" name="address" required><br>
+      <label for="dob">Date of Birth:</label><br>
+      <input type="date" name="dob" required><br>
+      <label for="phno">Phone No:</label><br>
+      <input type="text" name="phno" required><br>
+      <br>
+      <input type="Submit" value="Submit">
+    </form>
+  </div>
+</body>
+
+</html>

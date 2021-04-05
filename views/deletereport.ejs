@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <title>Delete Report</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#"></a>
+      </div>
+      <ul class="nav navbar-nav">
+        
+        <li><a href="/institute">Institute Portal</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container">
+
+
+    <h2>Delete Report</h2>
+
+    <form action="/institute/report?_method=DELETE"  method="POST">
+        <label for="id">id:</label><br>
+        R-<input type="number" min="1" max="99999" name="id" required><br>        
+    
+
+      <br>
+      <input type="Submit" value="Submit">
+    </form>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,83 @@
+
+    <!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <title>Institute Portal</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#"></a>
+      </div>
+      <ul class="nav navbar-nav">
+        
+        <li><a href="/institute">Institute Portal</a></li>
+      </ul>
+    </div>
+  </nav>
+
+    <div class="container">
+        <h3>Students View And Manage</h3>
+    </div>
+
+    <div class="container" >
+        <div class="row">
+    
+          <ul class="container">
+            <a class="btn btn-primary text-center" href="/institute/student/new" role="button"> Add student</a>
+            <br>
+            <br>
+            <a class="btn btn-primary text-center" href="/institute/student/edit" role="button"> Edit Student</a>
+            <br>
+            <br>
+            <a class="btn btn-primary text-center" href="/institute/student/delete" role="button"> Delete Student</a>
+
+    
+          </ul>
+        </div>
+      </div>
+
+      <br>
+      <br>
+      <br>
+      <br>
+  <div class="container">
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">id</th>
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Address</th>
+            <th scope="col">Date Of Birth</th>
+            <th scope="col">Phone</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% data.forEach(student => { %>  
+          <tr>
+            <th scope="row">S-<%= student.id %></th>
+            <td><%= student.sname %></td>
+            <td><%= student.email %></td>
+            <td><%= student.address %></td>
+            <td><%= student.dob %></td>
+            <td><%= student.phone %></td>
+          </tr>
+          <% }); %>
+        
+        </tbody>
+      </table>
+  </div>
+</body>
+
+</html>
+  </div>
+</body>
+
+</html>

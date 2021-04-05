@@ -1,0 +1,97 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+      <title>Report Portal</title>
+    </head>
+    
+    <body>
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#"></a>
+          </div>
+          <ul class="nav navbar-nav">
+            
+            <li><a href="/institute">Institute Portal</a></li>
+          </ul>
+        </div>
+      </nav>
+    
+        <div class="container">
+            <h3>Report Portal</h3>
+        </div>
+    
+        <div class="container" >
+            <div class="row">
+        
+              <ul class="container">
+                <a class="btn btn-primary text-center" href="/institute/report/new" role="button"> Generate report</a>
+                <br>
+                <br>
+                <a class="btn btn-primary text-center" href="/institute/report/edit" role="button"> Edit report</a>
+                <br>
+                <br>
+                <a class="btn btn-primary text-center" href="/institute/report/delete" role="button"> Delete report</a>
+    
+        
+              </ul>
+            </div>
+          </div>
+    
+          <br>
+          <br>
+
+          <div class="container" style="border: 2px solid black">
+
+            <h3>Get Report By ID</h3>
+
+          <form action="/institute/report/view"  method="POST">
+            <label for="id">id:</label><br>
+            S-<input type="text" name="id" required><br>   
+            <br>
+          <input type="Submit" value="Submit">
+            </form>  
+            <br>
+            <br>   
+        
+        </div>
+        <br>
+          
+
+          <div class="container">
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Report ID</th>
+                    <th scope="col">Student ID</th>
+                    <th scope="col">Course ID</th>
+                    <th scope="col">Marks</th>
+                    <th scope="col">Remark</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <% data.forEach(report => { %>  
+                  <tr>
+                    <th scope="row">R-<%= report.id %></th>
+                    <td>S-<%= report.sid %></td>
+                    <td>C-<%= report.cid %></td>
+                    <td><%= report.marks %></td>
+                    <td><%= report.remark %></td>
+                  </tr>
+                  <% }); %>
+                
+                </tbody>
+              </table>
+          </div>
+    </body>
+    
+    </html>
+      </div>
+    </body>
+    
+    </html>

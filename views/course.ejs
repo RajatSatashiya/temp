@@ -1,0 +1,79 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+      <title>Course Portal</title>
+    </head>
+    
+    <body>
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#"></a>
+          </div>
+          <ul class="nav navbar-nav">
+            
+            <li><a href="/institute">Institute Portal</a></li>
+          </ul>
+        </div>
+      </nav>
+    
+        <div class="container">
+            <h3>Course View And Manage</h3>
+        </div>
+    
+        <div class="container" >
+            <div class="row">
+        
+              <ul class="container">
+                <a class="btn btn-primary text-center" href="/institute/course/new" role="button"> Add course</a>
+                <br>
+                <br>
+                <a class="btn btn-primary text-center" href="/institute/course/edit" role="button"> Edit course</a>
+                <br>
+                <br>
+                <a class="btn btn-primary text-center" href="/institute/course/delete" role="button"> Delete course</a>
+    
+        
+              </ul>
+            </div>
+          </div>
+    
+          <br>
+          <br>
+          <br>
+          <br>
+      <div class="container">
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">id</th>
+                <th scope="col">Course Name</th>
+                <th scope="col">Credits </th>
+                <th scope="col">Duration(months) </th>
+              </tr>
+            </thead>
+            <tbody>
+              <% data.forEach(course => { %>  
+              <tr>
+                <th scope="row">C-<%= course.id %></th>
+                <td><%= course.cname %></td>
+                <td><%= course.credit %></td>
+                <td><%= course.duration %></td>
+              </tr>
+              <% }); %>
+            
+            </tbody>
+          </table>
+      </div>
+    </body>
+    
+    </html>
+      </div>
+    </body>
+    
+    </html>

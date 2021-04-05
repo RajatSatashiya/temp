@@ -1,0 +1,68 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+      <title>Report Portal</title>
+    </head>
+    
+    <body>
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#"></a>
+          </div>
+          <ul class="nav navbar-nav">
+            
+            <li><a href="/institute">Institute Portal</a></li>
+          </ul>
+        </div>
+      </nav>
+    
+        <div class="container">
+            <h3>Report Portal</h3>
+            <% if(report.length) {  %>
+            <h4>Report Of <%= report[0].sname %>  </h4>
+            <% }  else { %> 
+                <h4>No Report Submitted</h4>
+            <% } %>
+        </div>
+    
+        
+          
+
+          <div class="container">
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Report ID</th>
+                    <th scope="col">Student ID</th>
+                    <th scope="col">Course ID</th>
+                    <th scope="col">Marks</th>
+                    <th scope="col">Remark</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <% report.forEach(report => { %>  
+                  <tr>
+                    <th scope="row">R-<%= report.id %></th>
+                    <td>S-<%= report.sid %></td>
+                    <td>C-<%= report.cid %></td>
+                    <td><%= report.marks %></td>
+                    <td><%= report.remark %></td>
+                  </tr>
+                  <% }); %>
+                
+                </tbody>
+              </table>
+          </div>
+    </body>
+    
+    </html>
+      </div>
+    </body>
+    
+    </html>

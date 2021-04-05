@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <title>Report Portal</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#"></a>
+      </div>
+      <ul class="nav navbar-nav">
+        
+        <li><a href="/institute">Institute Portal</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container">
+
+
+    <h2>Edit Report</h2>
+
+
+    <form  action="/institute/report?_method=PUT" method="POST">
+    <label for="id">Report ID </label><br>
+    R-<input type="number" min="1" max="10000" step="1" name="id" required><br>
+      <label for="sid">Select Student ID</label><br>
+      <select name="sid"  >
+        <% sdata.forEach(data => { %>
+        <option value= "<%= data.id %>" >S-<%= data.id %></option>
+        <% }) %>
+      </select>
+      <br>
+      <br>
+      <label for="cid">Select Course ID</label><br>
+      <select name="cid" >
+        <% cdata.forEach(data => { %>
+            <option value="<%= data.id %> ">C-<%= data.id %></option>
+        <% }) %>
+      </select>
+      <br>
+      <br>
+      <label for="marks">marks(Min: 0 Max: 100) :</label><br>
+      <input type="number" min="0" max="100" step="0.1" name="marks" required><br>
+      <label for="remark">Remark:</label><br>
+      <input type="text" name="remark" ><br>
+      <br>
+      <input type="Submit" value="Submit">
+    </form>
+  </div>
+</body>
+
+</html>
